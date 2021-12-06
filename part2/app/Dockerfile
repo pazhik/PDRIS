@@ -1,0 +1,6 @@
+FROM python:latest
+WORKDIR /code
+ADD requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+COPY client.py client.py
+CMD ["python", "-u", "client.py"]
